@@ -1,0 +1,6 @@
+# MAP_FEATURES_WORKING
+
+Describe which features are currently working and their status.
+
+- Feature 1: ...
+- Feature 2: ...
