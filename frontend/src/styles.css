@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+:root{
+  --bg:#ffffff;
+  --muted:#6b7280;
+  --accent:#07122a;
+  --primary:#0066ff;
+  --glass: rgba(0,102,255,0.08);
+  --card:#fbfdff;
+  --radius:14px;
+  --container:1100px;
+  --gap:1rem;
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;color:var(--accent);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.6}
+
+.container{max-width:var(--container);margin:0 auto;padding:1rem}
+
+/* Nav */
+.nav{background:linear-gradient(180deg,#081226 0%, #07122a 100%);position:sticky;top:0;z-index:40}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:0.8rem 0}
+.brand{color:white;text-decoration:none;display:flex;flex-direction:column}
+.brand-mark{font-weight:800}
+.brand-sub{font-size:0.8rem;opacity:0.8}
+.nav-links{display:flex;align-items:center;gap:0.6rem}
+.nav-link{color:rgba(255,255,255,0.9);text-decoration:none;padding:0.45rem 0.6rem;border-radius:8px}
+.btn{display:inline-block;text-decoration:none;border-radius:10px;padding:0.6rem 0.9rem;font-weight:600}
+.btn-cta{background:linear-gradient(90deg,var(--primary),#004ad6);color:#fff}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-ghost{background:transparent;border:1px solid rgba(2,6,23,0.06);color:var(--primary)}
+.btn-outline{border:1px solid rgba(2,6,23,0.06);background:white;color:var(--accent)}
+
+/* HERO */
+.hero{background:linear-gradient(180deg,#f6fbff 0%, #fff 100%);padding:3.2rem 0}
+.hero-grid{display:flex;gap:2rem;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.hero-copy{flex:1;min-width:320px}
+.hero-copy h1{font-size:2.1rem;margin:0 0 0.6rem}
+.lead{color:var(--muted);font-size:1.05rem;margin-bottom:1rem}
+.hero-actions{display:flex;gap:1rem;margin-bottom:1rem}
+.hero-features{display:flex;gap:1.2rem;list-style:none;padding:0;margin:0;color:var(--muted);flex-wrap:wrap}
+.hero-media{flex:0.9;min-width:300px}
+.device-mock{background:white;border-radius:12px;box-shadow:0 12px 30px rgba(9,18,36,0.08);overflow:hidden;border:1px solid rgba(2,6,23,0.04)}
+.browser-top{height:14px;background:linear-gradient(90deg,#eee,#f6f6f6)}
+.browser-main{padding:1rem}
+.card-preview{background:linear-gradient(180deg,#ffffff,#f8fbff);border-radius:10px;padding:1rem;border:1px solid rgba(2,6,23,0.04)}
+.profile-preview{display:flex;gap:0.8rem;align-items:center;margin-top:0.8rem}
+.avatar{width:48px;height:48px;border-radius:10px;background:linear-gradient(90deg,#a6d1ff,#7b61ff)}
+
+/* Features */
+.features-section{padding:2.2rem 0}
+.section-header h2{margin:0 0 0.4rem}
+.section-header .muted{color:var(--muted)}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.feature-card{background:var(--card);border-radius:10px;padding:1rem;border:1px solid rgba(2,6,23,0.04)}
+
+/* Pricing */
+.pricing-section{padding:2.2rem 0}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.price-card{background:white;border-radius:12px;padding:1.2rem;border:1px solid rgba(2,6,23,0.05);text-align:left}
+.price-card.featured{box-shadow:0 10px 30px rgba(2,6,23,0.06);transform:translateY(-6px);border:1px solid rgba(2,6,23,0.06)}
+.price-title{font-weight:700;margin-bottom:0.2rem}
+.price-amount{font-size:1.6rem;margin:0.4rem 0 0.8rem}
+
+/* Testimonials */
+.testimonials-section{padding:2.2rem 0}
+.test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.testimonial{background:linear-gradient(180deg,#ffffff,#fbfdff);padding:1rem;border-radius:10px;border:1px solid rgba(2,6,23,0.04)}
+
+/* Footer */
+.site-footer{padding:2rem 0;border-top:1px solid #f1f5f9;background:#fff}
+.footer-inner{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.footer-inner a{display:block;color:var(--muted);text-decoration:none;margin-bottom:0.4rem}
+.copyright{text-align:center;color:var(--muted);margin-top:1rem}
+
+/* Responsive */
+@media (max-width:900px){
+  .nav-inner{padding:0.6rem}
+  .hero-grid{flex-direction:column}
+  .brand-sub{display:none}
+}
